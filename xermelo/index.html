@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xermelo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="form">
+      <div id="signup-form">
+        <h2>Signing up is simple and free</h2>
+        <label for="xermelo">Are you a patient currently taking XERMELO?</label>
+        <br />
+        <input
+          type="radio"
+          id="yes"
+          name="yesno"
+          value="yes"
+          onclick="toggleAdditionalForm()"
+        />
+        <label for="yes">Yes</label>
+        <br>
+        <input
+          type="radio"
+          id="no"
+          name="yesno"
+          value="no"
+          onclick="toggleAdditionalForm()"
+        />
+        <label for="no">No</label>
+      </div>
+    </div>
+
+    <div id="additional-info" style="display: none">
+      <p>
+        TerSera is dedicated to sharing knowledge, experience, and resources to
+        support you. Tell us how and when a nurse can connect with you by
+        completing the form below. Click "Submit" when you're done.
+      </p>
+
+      <p>All fields marked with an asterisk (*) are required fields.</p>
+      <div id="additional-info-form">
+        <form
+          id="additional-info-form"
+          action=""
+          name="myform"
+          method="post"
+          onsubmit="validateForm()"
+        >
+          <label for="first_name">FIRST NAME*</label>
+          <input type="text" id="first_name" />
+          <span id="firstnamemessage" style="color: red"></span>
+          <label for="last_name">LAST NAME*</label>
+          <input type="text" id="last_name" />
+          <span id="lastnamemessage" style="color: red"></span>
+          <label for="email_address">EMAIL ADDRESS*</label>
+          <input type="text" id="email_address" />
+          <span id="emailaddressmessage" style="color: red"></span>
+
+          <label for="phone">PHONE*</label>
+          <input type="text" id="phone" placeholder="(---)--- ----" />
+          <span id="phonemessage" style="color: red"></span>
+
+          <div class="timezone">
+            <p>Please select the best time to reach you by phone.</p>
+            <div class="time-zone-selection">
+              <label for="time-of-day">TIME OF DAY(OPTIONAL)</label>
+              <select id="xermelo">
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
+              <label for="time-zone">YOUR TIME ZONE</label>
+              <select id="time-zone">
+                <option value="eastern">Eastern</option>
+                <option value="central">Central</option>
+                <option value="mountain">Mountain</option>
+                <option value="pacific">Pacific</option>
+              </select>
+            </div>
+            <p>
+              By clicking “Submit,” I authorize you to use my personal
+              information to be contacted by a Clinical Nurse Educator to
+              discuss questions related to XERMELO. I understand that once
+              disclosed to the Company, my personal information disclosed under
+              this authorization may be further disclosed and used in
+              furtherance of the Clinical Nurse Educator Program and related
+              activities by the recipient, its affiliates, and service providers
+              and may no longer be protected by federal privacy law, including
+              HIPAA. This authorization will expire within five (5) years from
+              today’s date, unless a shorter period is provided by state law. I
+              understand that I may revoke this authorization at any time by
+              sending written notice of revocation to TerSera Therapeutics LLC
+              at 520 Lake Cook Road, Suite 500, Deerfield, IL 60015, except to
+              the extent that action already has been taken in reliance on this
+              authorization. I understand that I have a right to receive a copy
+              of this signed authorization. To learn more, read our Privacy
+              Policy.
+            </p>
+          </div>
+          <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

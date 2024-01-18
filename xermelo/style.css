@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #dfd7d7;
+    margin: 20px;
+    padding: 30px;
+    height: 100vh;
+}
+
+
+
+#additional-info-form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+    padding:  10px 50px;
+}
+
+label.error{
+    font-weight: 700;
+    display: block;
+    color: #f00;
+    font-size: 14px;
+}
+
